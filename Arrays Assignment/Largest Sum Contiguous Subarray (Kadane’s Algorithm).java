@@ -6,7 +6,7 @@ class Main {
 	{
 		int size = a.length;
 		int maxcurr = Integer.MIN_VALUE, maxend= 0;
-    for (int i = 0; i < size; i++) {
+    		for (int i = 0; i < size; i++) {
 			maxend = maxend + a[i];
 			if (maxcurrr < maxend)
 				maxcurrr = maxend;
@@ -19,8 +19,7 @@ class Main {
 	public static void main(String[] args)
 	{
 		int[] a = { -2, -3, 4, -1, -2, 1, 5, -3 };
-		System.out.println("Maximum contiguous sum is "
-						+ maxSubArraySum(a));
+		System.out.println("Maximum contiguous sum is"+ maxSubArraySum(a));
 	}
 
 	
