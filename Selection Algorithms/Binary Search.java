@@ -1,37 +1,33 @@
-class BinarySearch {
-   
-    int binarySearch(int arr[], int l, int r, int x)
-    {
-        if (r >= l) {
-            int mid = l + (r - l) / 2;
- 
-            
-            if (arr[mid] == x)
-                return mid;
- 
-            if (arr[mid] > x)
-                return binarySearch(arr, l, mid - 1, x);
- 
-            
-            return binarySearch(arr, mid + 1, r, x);
-        }
- 
-        
-        return -1;
-    }
- 
-    
-    public static void main(String args[])
-    {
-        BinarySearch ob = new BinarySearch();
-        int arr[] = { 2, 3, 4, 10, 40 };
-        int n = arr.length;
-        int x = 10;
-        int result = ob.binarySearch(arr, 0, n - 1, x);
-        if (result == -1)
-            System.out.println("Element not present");
-        else
-            System.out.println("Element found at index "
-                               + result);
-    }
+import java.util.*;
+class Main
+{
+	public static void main (String[] args)
+	{
+		
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++){
+		    arr[i]=sc.nextInt();
+		}
+		int target=sc.nextInt();
+		Arrays.sort(arr);
+		int l=0;
+		int r=arr.length-1;
+		while(l<r){
+		    int mid=l+(r-l)/2;
+		    if(arr[mid]==target){
+		        System.out.print(mid);
+		        break;
+		    }
+		    else if(arr[mid]<target){
+		        l=mid+1;
+		    }
+		    else{
+		        r=mid-1;
+		    }
+		}
+		System.out.print("-1");
+		
+	}
 }
