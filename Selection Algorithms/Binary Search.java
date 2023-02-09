@@ -27,7 +27,7 @@ class Main
 		        r=mid-1;
 		    }
 		}
-		System.out.print("-1");
+		//System.out.print("-1");
 		
 	}
 }
